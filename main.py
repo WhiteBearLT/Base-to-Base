@@ -1,9 +1,9 @@
-def n_to_10n(number, base):
-    notation10_def = int(number, base)
-    return notation10_def
+def n_to_bin(number, base):  # Input number to bin
+    base_bin = int(number, base)
+    return base_bin
 
 
-def n10_to_n(number10, base, abc):
+def bin_to_nBase(number10, base, abc):  # Returned bin to input base2
     number_answer = ''
     while number10 > 0:
         number_answer = abc[number10 % base] + number_answer
@@ -12,13 +12,15 @@ def n10_to_n(number10, base, abc):
 
 
 if __name__ == '__main__':
-    alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'  # abc's use for base bigger then 10
 
-    num = input('Your number ')
-    base1 = int(input('Base of number '))
-    base2 = int(input('Output number with base (up to 37) '))
+    num = input('Your number ')  # Num
+    base1 = int(input('Base of number '))  # Base of input num
+    base2 = int(input('Output number with base (up to 37) '))  # Output number's with base
 
-    number10n = n_to_10n(num, base1)
-    number_answer_n2 = n10_to_n(number10n, base2, alphabet)
+    bin_number = n_to_bin(num, base1)
+    out_number_withBase2 = bin_to_nBase(bin_number, base2, alphabet)
 
-    print(f'\n {num} ({base1}) --> {number10n} (10) --> {number_answer_n2} ({base2})')
+    # Output (input, base10, outBaseNum)
+    print(f'\n {num} ({base1}) --> {bin_number} (10) --> {out_number_withBase2} ({base2})')
+
