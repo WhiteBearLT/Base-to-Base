@@ -31,7 +31,7 @@ if __name__ == '__main__':
         try:
             num = input('Your number ')  # Num
             base1 = int(input('Base of number '))  # Base of input num
-            base2 = int(input('Output number with base (up to 37) '))  # Output number's with base
+            base2 = int(input('Output number with base (up to 36) '))  # Output number's with base
 
             if base1 > 0 and base2 > 0:  # Base higher then 0 check
                 bin_number = n_to_bin(num, base1)
