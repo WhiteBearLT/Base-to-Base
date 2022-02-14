@@ -23,7 +23,7 @@ def bin_to_nBase(binNumber, base, abc):  # Returned bin to input base2
             return -1  # When get error
 
 
-if __name__ == '__main__':
+def main():
     alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'  # abc's use for base bigger then 10
 
     flag = True
@@ -44,7 +44,7 @@ if __name__ == '__main__':
                 if answer == 'y' or answer == 'Y':
                     flag = True  # If answer y (yes)
                 else:
-                    flag = False  # Stop cycle flag if answer n (no)
+                    return 'Ok'  # Return ok after repeat answer n (no)
 
             else:  # Base < 0
                 print('\nUse base higher then 0')
@@ -52,3 +52,7 @@ if __name__ == '__main__':
         except ValueError:
             print('\nTry again')  # When get error
             flag = True
+
+
+if __name__ == '__main__':
+    print(main())
