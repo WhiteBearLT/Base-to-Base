@@ -33,7 +33,7 @@ def main():
             base1 = int(input('Base of number '))  # Base of input num
             base2 = int(input('Output number with base (up to 36) '))  # Output number's with base
 
-            if base1 > 0 and base2 > 0:  # Base higher than 0 check
+            if base1 > 0 and 0 < base2 < 37:  # Base higher than 0 check
                 bin_number = n_to_bin(num, base1)
                 out_number_withBase2 = bin_to_nBase(bin_number, base2, alphabet)
 
@@ -47,7 +47,7 @@ def main():
                     return 'Ok'  # Return ok after repeat answer n (no)
 
             else:  # Base < 0
-                print('\nUse base higher then 0')
+                print('\nUse base higher than 0 and bellow than 37')
                 flag = True  # Cycle repeat
         except ValueError:
             print('\nTry again')  # When get error
