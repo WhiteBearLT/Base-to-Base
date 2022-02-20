@@ -40,8 +40,8 @@ def main():
                 # Output (input, base10, outBaseNum)
                 print(f'\n {num} ({base1}) --> {bin_number} (10) --> {out_number_withBase2} ({base2})')
 
-                answer = input('\nYou want repeat program? (type \'y\' or \'n\') ')  # Repeat answer
-                if answer == 'y' or answer == 'Y':
+                answer = input('\nYou want repeat program? (type \'y\' or \'n\') ').lower()  # Repeat answer
+                if answer == 'y':
                     flag = True  # If answer y (yes)
                 else:
                     return 'Ok'  # Return ok after repeat answer n (no)
